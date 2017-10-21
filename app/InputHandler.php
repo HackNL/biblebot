@@ -15,8 +15,6 @@ class InputHandler {
 	const INPUT_TYPE_RANDOM = 'Random'; //Willekeruige tekst
 	const INPUT_TYPE_HELP = 'Help';
 
-	private $rawInput;
-	private $inputType; //1 van de drie constantes
 	private $parsedBookName;
 	private $parsedChapter;
 	private $parsedBeginVerse;
@@ -24,13 +22,12 @@ class InputHandler {
 	private $apiName;
 
 	public function __construct() {
-
 	}
 
-	public function parseInput( $rawInput ) {
+	public function parseInput( $rawInput,$botKey ) {
 		$curl = curl_init();
 		curl_setopt_array( $curl, array(
-			CURLOPT_URL            => "https://api.dialogflow.com/v1/query?v=20170712&query=" . urlencode( $rawInput ) . "&lang=en&sessionId=5676f59a-36d2-4106-bfa0-32ec0e993067&timezone=Europe%2FParis'",
+			CURLOPT_URL            => "https://api.dialogflow.com/v1/query?v=20170712&query=" . urlencode( $rawInput ) . "&lang=en&sessionId=" . $botKey . "&timezone=Europe%2FParis'",
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING       => "",
 			CURLOPT_MAXREDIRS      => 10,
@@ -62,7 +59,6 @@ class InputHandler {
 				break;
 
 				case self::INPUT_TYPE_SEARCH:
-
 				break;
 
 				case self::INPUT_TYPE_RANDOM:

@@ -23,7 +23,6 @@ class ApiHandler
 
     public function sendApiCall($apiName, $chapter, $beginVerse, $endVerse)
     {
-
         //Make API Call
         $apiResponse = file_get_contents('https://bijbel.eo.nl/api/' . $apiName . '/' . $chapter . '/' . $beginVerse);
         //Remove callback from JSON
@@ -68,7 +67,6 @@ class ApiHandler
                 //object data this must be welcome notification
             } else {
                 $found = true;
-
                 // heading
                 $json['header'] = $npo->notifications[0]->headings->en;
                 // text
