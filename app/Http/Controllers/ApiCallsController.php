@@ -9,8 +9,18 @@
 namespace App\Http\Controllers;
 
 
-class ApiCallsController extends Controller {
-	function test(){
-		return "test";
-	}
+use App\ApiHandler;
+
+class ApiCallsController extends Controller
+{
+    public function test()
+    {
+        return "test";
+    }
+
+    public function getVerseOfTheDay()
+    {
+        $api = new ApiHandler();
+        return $api->getVerseOfTheDay();
+    }
 }
