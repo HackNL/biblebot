@@ -10,9 +10,10 @@ namespace App;
 
 
 class InputHandler {
-	const INPUT_TYPE_SEARCH = 'search'; //Zoeken naar bepaalde term door hele bijbel
-	const INPUT_TYPE_LOOKUP = 'lookup'; //Bijbelgedeelte opvraag
-	const INPUT_TYPE_SEARCH_AMOUNT = 3; //Aantal hit van bepaalde zoekterm door hele bijbel
+	const INPUT_TYPE_SEARCH = 'Search'; //Zoeken naar bepaalde term door hele bijbel
+	const INPUT_TYPE_VERSES = 'Verses'; //Bijbelgedeelte opvraag
+	const INPUT_TYPE_RANDOM = 'Random'; //Willekeruige tekst
+	const INPUT_TYPE_HELP = 'Help';
 
 	private $rawInput;
 	private $inputType; //1 van de drie constantes
@@ -46,16 +47,40 @@ class InputHandler {
 		$err      = curl_error( $curl );
 		curl_close( $curl );
 		$result = json_decode( $response );
+
+
 		if($result->result->fulfillment->speech != ""){
 			return $result->result->fulfillment->speech;
 		}
-		else{
-			return array(
-			"book" => $result->result->parameters->Book,
-			"chapter" => $result->result->parameters->Chapter,
-			"verse" => $result->result->parameters->Verse,
-			);
+		elseif(isset($result->result->metadata->intentName)){
+			//Intent is known and no further responise is set, so handle the intent
+			$intentName = $result->result->metadata->intentName;
+			$parameters = isset($result->result->parameters) ? (array)$result->result->parameters : [];
+			switch($intentName){
+				case self::INPUT_TYPE_VERSES:
+					$handler = new \App\IntentHandlers\versesIntentHandler($intentName, $parameters);
+				break;
+
+				case self::INPUT_TYPE_SEARCH:
+
+				break;
+
+				case self::INPUT_TYPE_RANDOM:
+
+				break;
+				
+				case self::INPUT_TYPE_HELP:
+
+				break;
+				default:
+
+				break;
+			}
+
+
+			if(isset($handler)) return $handler;
 		}
+		return false;
 	}
 
 	/**
