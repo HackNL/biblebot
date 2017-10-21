@@ -66,7 +66,7 @@ class InputHandler {
 				break;
 
 				case self::INPUT_TYPE_RANDOM:
-
+                    $handler = new \App\IntentHandlers\randomIntentHandler($intentName, $parameters);
 				break;
 				
 				case self::INPUT_TYPE_HELP:
