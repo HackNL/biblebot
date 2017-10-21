@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "575f9ab9236795a63bb31062ab9b83ae",
+    "content-hash": "46a8d1a3438c15bbf30dfa762d2dae3a",
     "packages": [
         {
             "name": "botman/botman",
@@ -123,6 +123,60 @@
                 "facebook messenger"
             ],
             "time": "2017-10-05T20:20:57+00:00"
+        },
+        {
+            "name": "botman/driver-slack",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/botman/driver-slack.git",
+                "reference": "d9e938b5c3fea82a434fb022862c7aa15222fe1d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/botman/driver-slack/zipball/d9e938b5c3fea82a434fb022862c7aa15222fe1d",
+                "reference": "d9e938b5c3fea82a434fb022862c7aa15222fe1d",
+                "shasum": ""
+            },
+            "require": {
+                "botman/botman": "~2.1",
+                "mpociot/slack-client": "0.3.*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "illuminate/console": "~5.0",
+                "illuminate/support": "~5.0",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "~5.0"
+            },
+            "suggest": {
+                "mpociot/slack-client": "Use the Slack RTM API with BotMan"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BotMan\\Drivers\\Slack\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcel Pociot",
+                    "email": "m.pociot@gmail.com"
+                }
+            ],
+            "description": "Slack driver for BotMan",
+            "homepage": "http://github.com/botman/driver-slack",
+            "keywords": [
+                "Botman",
+                "bot",
+                "slack"
+            ],
+            "time": "2017-10-04T09:49:19+00:00"
         },
         {
             "name": "botman/driver-web",
