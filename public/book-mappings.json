@@ -1,0 +1,672 @@
+[
+    {
+        "abbrevation": "Gen.",
+        "alternatives": [
+            "geneses"
+        ],
+        "apiName": "GEN",
+        "chapterCount": 50,
+        "name": "Genesis"
+    },
+    {
+        "abbrevation": "Ex.",
+        "alternatives": [
+            "exodes"
+        ],
+        "apiName": "EXO",
+        "chapterCount": 40,
+        "name": "Exodus"
+    },
+    {
+        "abbrevation": "Lev.",
+        "alternatives": [
+            "levitikus"
+        ],
+        "apiName": "LEV",
+        "chapterCount": 27,
+        "name": "Leviticus"
+    },
+    {
+        "abbrevation": "Num.",
+        "alternatives": [
+            "nummerie"
+        ],
+        "apiName": "NUM",
+        "chapterCount": 36,
+        "name": "Numeri"
+    },
+    {
+        "abbrevation": "Deut.",
+        "alternatives": [
+            "deu",
+            "deutronomium",
+            "deuteronomium"
+        ],
+        "apiName": "DEU",
+        "chapterCount": 34,
+        "name": "Deuteronomium"
+    },
+    {
+        "abbrevation": "Joz.",
+        "alternatives": [
+            "josua"
+        ],
+        "apiName": "JOS",
+        "chapterCount": 24,
+        "name": "Jozua"
+    },
+    {
+        "abbrevation": "Recht.",
+        "alternatives": [
+            "rich",
+            "richteren",
+            "rigteren"
+        ],
+        "apiName": "JDG",
+        "chapterCount": 21,
+        "name": "Rechters"
+    },
+    {
+        "abbrevation": "Ruth",
+        "alternatives": [
+            "ru",
+            "rut",
+            "rud"
+        ],
+        "apiName": "RUT",
+        "chapterCount": 4,
+        "name": "Ruth"
+    },
+    {
+        "abbrevation": "1 Sam.",
+        "alternatives": [
+            "samuel",
+            "sam"
+        ],
+        "apiName": "1SA",
+        "chapterCount": 31,
+        "name": "1 Samuel"
+    },
+    {
+        "abbrevation": "2 Sam.",
+        "alternatives": [
+            "samuel",
+            "sam"
+        ],
+        "apiName": "2SA",
+        "chapterCount": 24,
+        "name": "2 Samuel"
+    },
+    {
+        "abbrevation": "1 Kon.",
+        "alternatives": [
+            "koningen"
+        ],
+        "apiName": "1KI",
+        "chapterCount": 22,
+        "name": "1 Koningen"
+    },
+    {
+        "abbrevation": "2 Kon.",
+        "alternatives": [
+            "koningen"
+        ],
+        "apiName": "2KI",
+        "chapterCount": 25,
+        "name": "2 Koningen"
+    },
+    {
+        "abbrevation": "1 Kron.",
+        "alternatives": [
+            "1kro"
+        ],
+        "apiName": "1CH",
+        "chapterCount": 29,
+        "name": "1 Kronieken"
+    },
+    {
+        "abbrevation": "2 Kron.",
+        "alternatives": [
+            "2kro"
+        ],
+        "apiName": "2CH",
+        "chapterCount": 36,
+        "name": "2 Kronieken"
+    },
+    {
+        "abbrevation": "Ezra",
+        "alternatives": [
+            "esra",
+            "esr",
+            "ezr"
+        ],
+        "apiName": "EZR",
+        "chapterCount": 10,
+        "name": "Ezra"
+    },
+    {
+        "abbrevation": "Neh.",
+        "alternatives": [
+            "neheemia"
+        ],
+        "apiName": "NEH",
+        "chapterCount": 13,
+        "name": "Nehemia"
+    },
+    {
+        "abbrevation": "Est.",
+        "alternatives": [
+            "esther"
+        ],
+        "apiName": "EST",
+        "chapterCount": 10,
+        "name": "Ester"
+    },
+    {
+        "abbrevation": "Job",
+        "alternatives": [
+            "jop"
+        ],
+        "apiName": "JOB",
+        "chapterCount": 42,
+        "name": "Job"
+    },
+    {
+        "abbrevation": "Ps.",
+        "alternatives": [
+            "psa",
+            "psalm",
+            "spalm"
+        ],
+        "apiName": "PSA",
+        "chapterCount": 150,
+        "name": "Psalmen"
+    },
+    {
+        "abbrevation": "Spr.",
+        "alternatives": [
+            "sp"
+        ],
+        "apiName": "PRO",
+        "chapterCount": 31,
+        "name": "Spreuken"
+    },
+    {
+        "abbrevation": "Pred.",
+        "alternatives": [
+            "pre",
+            "pr"
+        ],
+        "apiName": "ECC",
+        "chapterCount": 12,
+        "name": "Prediker"
+    },
+    {
+        "abbrevation": "Hoogl.",
+        "alternatives": [
+            "hoog",
+            "hoo"
+        ],
+        "apiName": "SNG",
+        "chapterCount": 8,
+        "name": "Hooglied"
+    },
+    {
+        "abbrevation": "Jes.",
+        "alternatives": [
+            "jesajah"
+        ],
+        "apiName": "ISA",
+        "chapterCount": 66,
+        "name": "Jesaja"
+    },
+    {
+        "abbrevation": "Jer.",
+        "alternatives": [
+            "jr"
+        ],
+        "apiName": "JER",
+        "chapterCount": 52,
+        "name": "Jeremia"
+    },
+    {
+        "abbrevation": "Klaagl.",
+        "alternatives": [
+            "kla",
+            "kl"
+        ],
+        "apiName": "LAM",
+        "chapterCount": 5,
+        "name": "Klaagliederen"
+    },
+    {
+        "abbrevation": "Ezech.",
+        "alternatives": [
+            "eze",
+            "ezegiel",
+            "esegiel"
+        ],
+        "apiName": "EZK",
+        "chapterCount": 48,
+        "name": "Ezechiël"
+    },
+    {
+        "abbrevation": "Dan.",
+        "alternatives": [
+            "da"
+        ],
+        "apiName": "DAN",
+        "chapterCount": 12,
+        "name": "Daniël"
+    },
+    {
+        "abbrevation": "Hos.",
+        "alternatives": [
+            "hoz",
+            "hozea"
+        ],
+        "apiName": "HOS",
+        "chapterCount": 14,
+        "name": "Hosea"
+    },
+    {
+        "abbrevation": "Joël",
+        "alternatives": [
+            "jl"
+        ],
+        "apiName": "JOL",
+        "chapterCount": 4,
+        "name": "Joël"
+    },
+    {
+        "abbrevation": "Amos",
+        "alternatives": [
+            "am",
+            "amoz"
+        ],
+        "apiName": "AMO",
+        "chapterCount": 9,
+        "name": "Amos"
+    },
+    {
+        "abbrevation": "Ob.",
+        "alternatives": [
+            "oba"
+        ],
+        "apiName": "OBA",
+        "chapterCount": 1,
+        "name": "Obadja"
+    },
+    {
+        "abbrevation": "Jona",
+        "alternatives": [
+            "jon"
+        ],
+        "apiName": "JON",
+        "chapterCount": 4,
+        "name": "Jona"
+    },
+    {
+        "abbrevation": "Micha",
+        "alternatives": [
+            "mic",
+            "miga"
+        ],
+        "apiName": "MIC",
+        "chapterCount": 7,
+        "name": "Micha"
+    },
+    {
+        "abbrevation": "Nah.",
+        "alternatives": [
+            "na"
+        ],
+        "apiName": "NAM",
+        "chapterCount": 3,
+        "name": "Nahum"
+    },
+    {
+        "abbrevation": "Hab.",
+        "alternatives": [
+            "habbakuk"
+        ],
+        "apiName": "HAB",
+        "chapterCount": 3,
+        "name": "Habakuk"
+    },
+    {
+        "abbrevation": "Sef.",
+        "alternatives": [
+            "zef",
+            "zefanja"
+        ],
+        "apiName": "ZEP",
+        "chapterCount": 3,
+        "name": "Sefanja"
+    },
+    {
+        "abbrevation": "Hag.",
+        "alternatives": [],
+        "apiName": "HAG",
+        "chapterCount": 2,
+        "name": "Haggai"
+    },
+    {
+        "abbrevation": "Zach.",
+        "alternatives": [
+            "za",
+            "zagaria",
+            "zaggaria",
+            "zagarja",
+            "sacharia"
+        ],
+        "apiName": "ZEC",
+        "chapterCount": 14,
+        "name": "Zacharia"
+    },
+    {
+        "abbrevation": "Mal.",
+        "alternatives": [
+            "malagie",
+            "malliagie",
+            "malliachie",
+            "malleachie",
+            "maleachie"
+        ],
+        "apiName": "MAL",
+        "chapterCount": 3,
+        "name": "Maleachi"
+    },
+    {
+        "abbrevation": "Mat.",
+        "alternatives": [
+            "mateus",
+            "matteus",
+            "matt"
+        ],
+        "apiName": "MAT",
+        "chapterCount": 28,
+        "name": "Matteüs"
+    },
+    {
+        "abbrevation": "Marc.",
+        "alternatives": [
+            "mar",
+            "markus",
+            "mark"
+        ],
+        "apiName": "MRK",
+        "chapterCount": 16,
+        "name": "Marcus"
+    },
+    {
+        "abbrevation": "Luc.",
+        "alternatives": [
+            "lukas",
+            "luk",
+            "lu"
+        ],
+        "apiName": "LUK",
+        "chapterCount": 24,
+        "name": "Lucas"
+    },
+    {
+        "abbrevation": "Joh.",
+        "alternatives": [
+            "johanes"
+        ],
+        "apiName": "JHN",
+        "chapterCount": 21,
+        "name": "Johannes"
+    },
+    {
+        "abbrevation": "Hand.",
+        "alternatives": [
+            "hd"
+        ],
+        "apiName": "ACT",
+        "chapterCount": 28,
+        "name": "Handelingen"
+    },
+    {
+        "abbrevation": "Rom.",
+        "alternatives": [
+            "romijnen",
+            "ro",
+            "rm"
+        ],
+        "apiName": "ROM",
+        "chapterCount": 16,
+        "name": "Romeinen"
+    },
+    {
+        "abbrevation": "1 Kor.",
+        "alternatives": [
+            "1corienthiers",
+            "1cor",
+            "1korinthe",
+            "korinthiers",
+            "korinthe"
+        ],
+        "apiName": "1CO",
+        "chapterCount": 16,
+        "name": "1 Korintiërs"
+    },
+    {
+        "abbrevation": "2 Kor.",
+        "alternatives": [
+            "2corienthiers",
+            "2cor",
+            "2korinthe",
+            "korinthiers",
+            "korinthe"
+        ],
+        "apiName": "2CO",
+        "chapterCount": 13,
+        "name": "2 Korintiërs"
+    },
+    {
+        "abbrevation": "Gal.",
+        "alternatives": [
+            "ga",
+            "gl"
+        ],
+        "apiName": "GAL",
+        "chapterCount": 6,
+        "name": "Galaten"
+    },
+    {
+        "abbrevation": "Ef.",
+        "alternatives": [
+            "efe",
+            "efesiers",
+            "efeze"
+        ],
+        "apiName": "EPH",
+        "chapterCount": 6,
+        "name": "Efeziërs"
+    },
+    {
+        "abbrevation": "Filip.",
+        "alternatives": [
+            "filiepenzen",
+            "filiepensen",
+            "fillip",
+            "fi",
+            "fil",
+            "fl"
+        ],
+        "apiName": "PHP",
+        "chapterCount": 4,
+        "name": "Filippenzen"
+    },
+    {
+        "abbrevation": "Kol.",
+        "alternatives": [
+            "col"
+        ],
+        "apiName": "COL",
+        "chapterCount": 4,
+        "name": "Kolossenzen"
+    },
+    {
+        "abbrevation": "1 Tes.",
+        "alternatives": [
+            "1tess",
+            "1tessalonisensen",
+            "tessalonicenzen",
+            "tessalonisensen"
+        ],
+        "apiName": "1TH",
+        "chapterCount": 5,
+        "name": "1 Tessalonicenzen"
+    },
+    {
+        "abbrevation": "2 Tes.",
+        "alternatives": [
+            "2tess",
+            "2tessalonisensen",
+            "tessalonicenzen",
+            "tessalonisensen"
+        ],
+        "apiName": "2TH",
+        "chapterCount": 3,
+        "name": "2 Tessalonicenzen"
+    },
+    {
+        "abbrevation": "1 Tim.",
+        "alternatives": [
+            "1timo",
+            "1timotheus",
+            "timo",
+            "timoteus",
+            "timotheus"
+        ],
+        "apiName": "1TI",
+        "chapterCount": 6,
+        "name": "1 Timoteüs"
+    },
+    {
+        "abbrevation": "2 Tim.",
+        "alternatives": [
+            "2timo",
+            "2timotheus",
+            "timo",
+            "timoteus",
+            "timotheus"
+        ],
+        "apiName": "2TI",
+        "chapterCount": 4,
+        "name": "2 Timoteüs"
+    },
+    {
+        "abbrevation": "Tit.",
+        "alternatives": [
+            "tites"
+        ],
+        "apiName": "TIT",
+        "chapterCount": 3,
+        "name": "Titus"
+    },
+    {
+        "abbrevation": "Filem.",
+        "alternatives": [
+            "file",
+            "fi",
+            "fil",
+            "fl"
+        ],
+        "apiName": "PHM",
+        "chapterCount": 1,
+        "name": "Filemon"
+    },
+    {
+        "abbrevation": "Hebr.",
+        "alternatives": [
+            "heb",
+            "hbr",
+            "hb",
+            "heebreeen",
+            "hebreen"
+        ],
+        "apiName": "HEB",
+        "chapterCount": 13,
+        "name": "Hebreeën"
+    },
+    {
+        "abbrevation": "Jak.",
+        "alternatives": [
+            "jac",
+            "jakobes",
+            "jacobes"
+        ],
+        "apiName": "JAS",
+        "chapterCount": 5,
+        "name": "Jakobus"
+    },
+    {
+        "abbrevation": "1 Petr.",
+        "alternatives": [
+            "1pet",
+            "petrus"
+        ],
+        "apiName": "1PE",
+        "chapterCount": 5,
+        "name": "1 Petrus"
+    },
+    {
+        "abbrevation": "2 Petr.",
+        "alternatives": [
+            "2pet",
+            "petrus"
+        ],
+        "apiName": "2PE",
+        "chapterCount": 3,
+        "name": "2 Petrus"
+    },
+    {
+        "abbrevation": "1 Joh.",
+        "alternatives": [
+            "1joh"
+        ],
+        "apiName": "1JN",
+        "chapterCount": 5,
+        "name": "1 Johannes"
+    },
+    {
+        "abbrevation": "2 Joh.",
+        "alternatives": [
+            "2joh"
+        ],
+        "apiName": "2JN",
+        "chapterCount": 1,
+        "name": "2 Johannes"
+    },
+    {
+        "abbrevation": "3 Joh.",
+        "alternatives": [
+            "3joh"
+        ],
+        "apiName": "3JN",
+        "chapterCount": 1,
+        "name": "3 Johannes"
+    },
+    {
+        "abbrevation": "Judas",
+        "alternatives": [
+            "jud"
+        ],
+        "apiName": "JUD",
+        "chapterCount": 1,
+        "name": "Judas"
+    },
+    {
+        "abbrevation": "Op.",
+        "alternatives": [
+            "open"
+        ],
+        "apiName": "REV",
+        "chapterCount": 22,
+        "name": "Openbaring"
+    }
+]

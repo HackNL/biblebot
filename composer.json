@@ -11,15 +11,16 @@
     "type": "project",
     "require": {
         "php": ">=7.0",
+        "botman/botman": "~2.0",
+        "botman/driver-facebook": "^1.2",
         "botman/driver-web": "~1.0",
         "botman/studio-addons": "~1.0",
+        "botman/tinker": "~1.0",
         "clue/stdio-react": "^1.0",
+        "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "botman/botman": "~2.0",
-        "botman/tinker": "~1.0",
-        "mpociot/slack-client": "^0.3.0",
-        "fideloper/proxy": "~3.3"
+        "mpociot/slack-client": "^0.3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
