@@ -46,7 +46,7 @@ class ApiHandler
     {
         //Make API Call
         $apiResponse = file_get_contents('https://bijbel.eo.nl/api/' . $apiName . '/' . str_replace('+' , '%20', urlencode($searchterm))) ;
-        
+
         //Decode JSON
         $resultObject = json_decode($apiResponse);
         //return "Niks gevonden ?";
@@ -56,7 +56,7 @@ class ApiHandler
                     'Top! Ik heb ' . $resultObject->hits->total . ' resultaten gevonden. Hier heb je een vers waar "' . $searchterm .
                     '" in voorkomt: ',
                     $hit->_source->book_title . ' ' . $hit->_source->chapter . ':' . $hit->_source->number .' :' .$hit->_source->flat_content,
-                    'Hier heb je een link om meer resultaten uit te pluizen: https://bijbel.eo.nl/zoeken?q=' . $searchterm
+                    'Hier heb je een link om meer resultaten uit te pluizen: https://bijbel.eo.nl/zoeken?q=' . urlencode($searchterm)
                 ];
             }
         }
