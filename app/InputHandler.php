@@ -14,6 +14,7 @@ class InputHandler {
 	const INPUT_TYPE_VERSES = 'Verses'; //Bijbelgedeelte opvraag
 	const INPUT_TYPE_RANDOM = 'Random'; //Willekeruige tekst
 	const INPUT_TYPE_HELP = 'Help';
+	const INPUT_TYPE_RESTART = 'Restart';
 
 	private $parsedBookName;
 	private $parsedChapter;
@@ -45,6 +46,9 @@ class InputHandler {
 		curl_close( $curl );
 		$result = json_decode( $response );
 
+		if($result->result->metadata->intentName == self::INPUT_TYPE_RESTART){
+			return "Restart";
+		}
 
 		if($result->result->fulfillment->speech != ""){
 			return $result->result->fulfillment->speech;

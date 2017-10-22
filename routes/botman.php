@@ -16,15 +16,19 @@ $botman->hears( '{input}', function ( $bot, $input ) {
 	try {
 		if($bot->userStorage()->get('botKey') == null){
 			$bot->userStorage()->save(['botKey' => getGUID()]);
-
 		}
-		$bot->reply($bot->userStorage()->get('botKey'));
 		$inputHandler = new InputHandler();
 		$parsedInput  = $inputHandler->parseInput($input,$bot->userStorage()->get('botKey'));
 
 		//If parsedinput is intenthandler, handle specific requirest, otherwise reply next message
 		if ( is_string( $parsedInput ) ) {
-			$bot->reply($parsedInput);
+			if($parsedInput == "Restart")
+			{
+				$bot->userStorage()->delete();
+			}
+			else{
+				$bot->reply($parsedInput);
+			}
 		}
 		elseif(get_parent_class($parsedInput) == 'App\IntentHandlers\baseIntentHandler') {
 			$handler = $parsedInput;
