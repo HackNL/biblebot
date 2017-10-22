@@ -40,7 +40,7 @@ class ApiHandler
     public function searchApiCall($apiName, $searchterm)
     {
         //Make API Call
-        $apiResponse = file_get_contents('https://bijbel.eo.nl/api/' . $apiName . '/' . $searchterm . '/');
+        $apiResponse = file_get_contents('https://bijbel.eo.nl/api/' . $apiName . '/' . url_encode($searchterm) . '/');
 
         //Decode JSON
         $resultObject = json_decode($apiResponse);
@@ -48,9 +48,9 @@ class ApiHandler
         foreach ($resultObject->hits->hits as $hit) {
             if ($hit->_type === 'verse') {
                 return [
-                    'Tjsa, ik heb ' . $resultObject->hits->total . ' resultaten gevonden. Hier heb je een vers waar "' . $searchterm .
+                    'Top! Ik heb ' . $resultObject->hits->total . ' resultaten gevonden. Hier heb je een vers waar "' . $searchterm .
                     '" in voorkomt: ',
-                    $hit->_source->flat_content,
+                    $hit->_source->book_title . ' ' . $hit->_source->chapter . ':' . $hit->_source->number .' :' .$hit->_source->flat_content,
                     'Hier heb je een link om meer resultaten uit te pluizen: https://bijbel.eo.nl/zoeken?q=' . $searchterm
                 ];
             }
