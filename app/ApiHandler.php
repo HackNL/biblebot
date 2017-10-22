@@ -37,6 +37,30 @@ class ApiHandler
         return $result;
     }
 
+    public function searchApiCall($apiName, $searchterm)
+    {
+        //Make API Call
+        $apiResponse = file_get_contents('https://bijbel.eo.nl/api/' . $apiName . '/' . $searchterm . '/');
+
+        //Decode JSON
+        $resultObject = json_decode($apiResponse);
+        //return "Niks gevonden ?";
+        foreach ($resultObject->hits->hits as $hit) {
+            if ($hit->_type === 'verse') {
+                return [
+                    'Tjsa, ik heb ' . $resultObject->hits->total . ' resultaten gevonden. Hier heb je een vers waar "' . $searchterm .
+                    '" in voorkomt: ',
+                    $hit->_source->flat_content,
+                    '<a href="https://bijbel.eo.nl/zoeken?q=' . $searchterm .'">Kik hier</a> om meer zoekresultaten te zien. '
+                ];
+            }
+        }
+
+        return [
+            '"' . $searchterm .'" heb ik niet voor je kunnen vinden in de bijbel.'
+        ];
+    }
+
     /*
      * Get verse of the day from the OneSignal API
      */

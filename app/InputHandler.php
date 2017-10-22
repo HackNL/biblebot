@@ -62,7 +62,10 @@ class InputHandler {
 					$handler = new \App\IntentHandlers\versesIntentHandler($intentName, $parameters);
 				break;
 
-				case self::INPUT_TYPE_SEARCH:
+                case self::INPUT_TYPE_SEARCH:
+
+                    $handler = new \App\IntentHandlers\searchIntentHandler($intentName, $parameters);
+//                    $handler = "SearchIntent.";
 				break;
 
 				case self::INPUT_TYPE_RANDOM:
@@ -76,7 +79,6 @@ class InputHandler {
 
 				break;
 			}
-
 
 			if(isset($handler)) return $handler;
 		}
