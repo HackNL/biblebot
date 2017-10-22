@@ -45,8 +45,8 @@ class ApiHandler
     public function searchApiCall($apiName, $searchterm)
     {
         //Make API Call
-        $apiResponse = file_get_contents('https://bijbel.eo.nl/api/' . $apiName . '/' . url_encode($searchterm) . '/');
-
+        $apiResponse = file_get_contents('https://bijbel.eo.nl/api/' . $apiName . '/' . str_replace('+' , '%20', urlencode($searchterm))) ;
+        
         //Decode JSON
         $resultObject = json_decode($apiResponse);
         //return "Niks gevonden ?";
