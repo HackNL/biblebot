@@ -56,7 +56,7 @@ class ApiHandler
                     'Tjsa, ik heb ' . $resultObject->hits->total . ' resultaten gevonden. Hier heb je een vers waar "' . $searchterm .
                     '" in voorkomt: ',
                     $hit->_source->flat_content,
-                    '<a href="https://bijbel.eo.nl/zoeken?q=' . $searchterm .'">Kik hier</a> om meer zoekresultaten te zien. '
+                    'Hier heb je een link om meer resultaten uit te pluizen: https://bijbel.eo.nl/zoeken?q=' . $searchterm
                 ];
             }
         }
