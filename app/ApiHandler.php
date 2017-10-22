@@ -24,13 +24,17 @@ class ApiHandler
     public function sendApiCall($apiName, $chapter, $beginVerse, $endVerse)
     {
         //Make API Call
-        $apiResponse = file_get_contents('https://bijbel.eo.nl/api/' . $apiName . '/' . $chapter . '/' . $beginVerse);
+        $apiResponse = file_get_contents('https://bijbel.eo.nl/api/' . $apiName . '/' . $chapter . '/' . $beginVerse . '/' . $endVerse);
         //Remove callback from JSON
         $apiResponse = str_replace(array('/**/callback(', ');'), '', $apiResponse);
         //Decode JSON
         $resultObject = json_decode($apiResponse);
         //Parse data
-        return $resultObject[0]->_source->flat_content;
+	    $result = "";
+	    for ($i = 0; $i < count($resultObject); $i++) {
+		    $result = $result . $resultObject[$i]->_source->flat_content;
+	    }
+        return $result;
     }
 
     /*
