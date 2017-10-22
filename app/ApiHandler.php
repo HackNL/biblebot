@@ -33,6 +33,11 @@ class ApiHandler
 	    $result = "";
 	    for ($i = 0; $i < count($resultObject); $i++) {
 		    $result = $result . $resultObject[$i]->_source->flat_content;
+		    if (empty($endVerse)) {
+		        break; // return only one verse
+            } else {
+		        $result .= ' ';
+            }
 	    }
         return $result;
     }
