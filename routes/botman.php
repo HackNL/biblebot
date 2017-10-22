@@ -13,6 +13,7 @@ $botman->fallback( function ( $bot ) {
 $bot->reply( "Er is iets mis gegaan, probeer het later nog eens." );
 } );
 $botman->hears( '{input}', function ( $bot, $input ) {
+    $bot->types();
 	try {
 		if($bot->userStorage()->get('botKey') == null){
 			$bot->userStorage()->save(['botKey' => getGUID()]);
