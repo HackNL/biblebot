@@ -69,7 +69,7 @@ class ApiHandler
 	public function getDailyVerse() {
 		$curl = curl_init();
 		curl_setopt_array( $curl, array(
-			CURLOPT_URL            => "https://www.biblegateway.com/votd/get/?format=json&version=NIV",
+			CURLOPT_URL            => "https://www.biblegateway.com/votd/get/?format=json&version=HTB",
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING       => "",
 			CURLOPT_MAXREDIRS      => 10,
@@ -91,7 +91,8 @@ class ApiHandler
 		$chapter = $verses[0];
 		$verse = $verses[1];
 		$apiName = BookMapper::getApiNameByEnglishName($bookName);
-		return $this->sendApiCall($apiName,$chapter,$verse,$verse);
+		$display_ref = $resultObject->votd->display_ref .  " ";
+		return $display_ref . $this->sendApiCall($apiName,$chapter,$verse,$verse);
 	}
 
 	/*
