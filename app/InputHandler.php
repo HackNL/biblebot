@@ -15,6 +15,7 @@ class InputHandler {
 	const INPUT_TYPE_RANDOM = 'Random'; //Willekeruige tekst
 	const INPUT_TYPE_HELP = 'Help';
 	const INPUT_TYPE_RESTART = 'Restart';
+	const INPUT_TYPE_DAILYVERSE = 'DailyVerse';
 
 	private $parsedBookName;
 	private $parsedChapter;
@@ -75,6 +76,9 @@ class InputHandler {
 				case self::INPUT_TYPE_HELP:
 
 				break;
+				case self::INPUT_TYPE_DAILYVERSE:
+					$handler = new \App\IntentHandlers\dailyVerseHandler($intentName, $parameters);
+					break;
 				default:
 
 				break;

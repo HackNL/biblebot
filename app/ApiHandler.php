@@ -66,9 +66,38 @@ class ApiHandler
         ];
     }
 
-    /*
-     * Get verse of the day from the OneSignal API
-     */
+	public function getDailyVerse() {
+		$curl = curl_init();
+		curl_setopt_array( $curl, array(
+			CURLOPT_URL            => "https://www.biblegateway.com/votd/get/?format=json&version=NIV",
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING       => "",
+			CURLOPT_MAXREDIRS      => 10,
+			CURLOPT_TIMEOUT        => 30,
+			CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST  => "GET",
+			CURLOPT_HTTPHEADER     => array(
+				"cache-control: no-cache",
+				"postman-token: a5768b49-c0fd-7406-0f92-1acdddf1adf9"
+			),
+		) );
+		$response = curl_exec( $curl );
+		curl_close( $curl );
+		//Decode JSON
+		$resultObject =  json_decode( $response );
+		$dailyVerse = explode(" ",$resultObject->votd->reference);
+		$bookName = $dailyVerse[0];
+		$verses = explode(":", $dailyVerse[1]);
+		$chapter = $verses[0];
+		$verse = $verses[1];
+		$apiName = BookMapper::getApiNameByEnglishName($bookName);
+		return $this->sendApiCall($apiName,$chapter,$verse,$verse);
+	}
+
+	/*
+	 * Get verse of the day from the OneSignal API
+	 * TODO: Change to daily verse
+	 */
     public function getVerseOfTheDay()
     {
         $limit = 1;
